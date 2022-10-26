@@ -56,8 +56,31 @@ a {
   border: 3px solid skyblue;
   height: 50px;
   align-items: center;
+  margin-right: 30px;
 }
 
 .img-height {
   padding: 5px 0 0 0;
+}
+
+.img-under-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.font-size-small {
+  font-size: 12px;
+}
+
+.font-align-center {
+  text-align: center;
+}
+
+.font-weight-bold {
+  font-weight: bold;
+}
+
+.button-box {
+  display: flex;
+  justify-content: space-around;
 }

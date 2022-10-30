@@ -1,6 +1,6 @@
 header {
   display: flex;
-  margin: 20px 350px 20px 320px;
+  /* margin: 20px 350px 20px 320px; */
 }
 
 select {
@@ -9,7 +9,7 @@ select {
   border: none;
   font-family: "Nanumgothic";
   border-radius: 3px;
-  background: url("화살표.png") no-repeat 100% 50%;
+  background: url("/resource/img/화살표.PNG") no-repeat 100% 50%;
   appearance: none;
 }
 

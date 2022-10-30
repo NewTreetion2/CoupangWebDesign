@@ -8,13 +8,18 @@
     <link rel="stylesheet" href="section.css" />
     <link rel="stylesheet" href="footer.css" />
     <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="responsive.css" />
     <title>쿠팡페이지 실습</title>
   </head>
   <body>
     <header>
       <div class="category-box">
         <a href="http://www.naver.com"
-          ><img src="카테고리.PNG" alt="카테고리" width="120" height="120"
+          ><img
+            src="/resource/img/카테고리.PNG"
+            alt="카테고리"
+            width="120"
+            height="120"
         /></a>
       </div>
       <div class="function-box">
@@ -40,10 +45,10 @@
               placeholder="찾고 싶은 상품을 선택해보세요!"
             />
             <a href="/">
-              <img src="마이크.PNG" alt="마이크" height="30" />
+              <img src="/resource/img/마이크.PNG" alt="마이크" height="30" />
             </a>
             <a href="/" class="img-height">
-              <img src="돋보기.PNG" alt="돋보기" height="25" />
+              <img src="/resource/img/돋보기.PNG" alt="돋보기" height="25" />
             </a>
           </div>
           <div class="img-under-text">
@@ -51,7 +56,7 @@
               href="/"
               class="font-size-small font-align-center font-weight-bold"
             >
-              <img src="마이쿠팡.PNG" alt="마이쿠팡" />마이쿠팡
+              <img src="/resource/img/마이쿠팡.PNG" alt="마이쿠팡" />마이쿠팡
             </a>
           </div>
           <div class="img-under-text">
@@ -59,7 +64,7 @@
               href="/"
               class="font-size-small font-align-center font-weight-bold"
             >
-              <img src="장바구니.PNG" alt="장바구니" />장바구니
+              <img src="/resource/img/장바구니.PNG" alt="장바구니" />장바구니
             </a>
           </div>
         </div>
@@ -100,7 +105,10 @@
         >
         <a href="/" class="font-size-small site-map-btn">신뢰관리센터</a>
         <a href="/" class="font-size-small site-map-btn">제휴마케팅</a>
-        <a href="/" class="font-size-small site-map-btn last-site-btn"
+        <a
+          href="/"
+          class="font-size-small site-map-btn last-site-btn"
+          id="test_id"
           >광고안내
         </a>
         <button class="global-btn font-color-gray">Global Site</button>
@@ -109,5 +117,35 @@
         <div></div>
       </div>
     </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+      integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let maple = $("#test_id");
+      console.log(maple);
+      maple.click((e) => {
+        e.preventDefault();
+        console.log(e.target.style.marginTop);
+        maple.css("margin-top", 100);
+        maple.css("transition", "margin-top 0.3s");
+      });
+    </script>
+    <script>
+      console.log(mapleFN());
+      console.log(mapleFN2());
+      var maple1 = 1;
+      let maple2 = 1;
+      function mapleFN() {
+        // 함수선언식
+        console.log(1111);
+      }
+
+      const mapleFN2 = () => {
+        // 함수 표현식
+        console.log(2222);
+      };
+    </script>
   </body>
 </html>

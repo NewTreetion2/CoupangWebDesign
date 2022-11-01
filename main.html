@@ -24,12 +24,19 @@
       </div>
       <div class="function-box">
         <div class="search-box">
+          <button class="display-none">
+            <img
+              src="resource/img/버튼메뉴.PNG"
+              alt="버튼메뉴"
+              width="25"
+              height="20"
+            />
+          </button>
           <a href="/" class="logo">
             <img
               src="https://image7.coupangcdn.com/image/coupang/common/logo_coupang_w350.png"
               alt="쿠팡 로고"
-              width="170"
-              height="40"
+              class="logo-img"
             />
           </a>
           <div class="search-btn">
@@ -54,7 +61,7 @@
           <div class="img-under-text">
             <a
               href="/"
-              class="font-size-small font-align-center font-weight-bold"
+              class="font-size-small font-align-center font-weight-bold img-none"
             >
               <img src="/resource/img/마이쿠팡.PNG" alt="마이쿠팡" />마이쿠팡
             </a>
@@ -62,7 +69,7 @@
           <div class="img-under-text">
             <a
               href="/"
-              class="font-size-small font-align-center font-weight-bold"
+              class="font-size-small font-align-center font-weight-bold img-none"
             >
               <img src="/resource/img/장바구니.PNG" alt="장바구니" />장바구니
             </a>
@@ -128,7 +135,7 @@
       maple.click((e) => {
         e.preventDefault();
         console.log(e.target.style.marginTop);
-        maple.css("margin-top", 100);
+        maple.css("margin-top", -100);
         maple.css("transition", "margin-top 0.3s");
       });
     </script>

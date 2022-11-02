@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="section.css" />
-    <link rel="stylesheet" href="footer.css" />
-    <link rel="stylesheet" href="header.css" />
-    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/section.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
     <title>쿠팡페이지 실습</title>
   </head>
   <body>
@@ -16,7 +17,7 @@
       <div class="category-box">
         <a href="http://www.naver.com"
           ><img
-            src="/resource/img/카테고리.PNG"
+            src="resource/img/카테고리.PNG"
             alt="카테고리"
             width="120"
             height="120"
@@ -39,6 +40,24 @@
               class="logo-img"
             />
           </a>
+          <button class="display-none button-radius-none margin-right">
+            <img
+              class="smart-glass-img"
+              src="resource/img/돋보기.PNG"
+              alt="버튼메뉴"
+              width="25"
+              height="20"
+            />
+          </button>
+          <button class="display-none button-radius-none">
+            <img
+              class="smart-cart-img"
+              src="resource/img/쇼핑카트.PNG"
+              alt="버튼메뉴"
+              width="25"
+              height="20"
+            />
+          </button>
           <div class="search-btn">
             <select>
               <option value="all" selected>전체</option>
@@ -46,16 +65,17 @@
               <option value="lifes">생필품</option>
             </select>
             <input
+              class="search-text-box"
               size="40"
               type="text"
               name="search-text"
               placeholder="찾고 싶은 상품을 선택해보세요!"
             />
             <a href="/">
-              <img src="/resource/img/마이크.PNG" alt="마이크" height="30" />
+              <img src="resource/img/마이크.PNG" alt="마이크" height="30" />
             </a>
             <a href="/" class="img-height">
-              <img src="/resource/img/돋보기.PNG" alt="돋보기" height="25" />
+              <img src="resource/img/돋보기.PNG" alt="돋보기" height="25" />
             </a>
           </div>
           <div class="img-under-text">
@@ -63,7 +83,7 @@
               href="/"
               class="font-size-small font-align-center font-weight-bold img-none"
             >
-              <img src="/resource/img/마이쿠팡.PNG" alt="마이쿠팡" />마이쿠팡
+              <img src="resource/img/마이쿠팡.PNG" alt="마이쿠팡" />마이쿠팡
             </a>
           </div>
           <div class="img-under-text">
@@ -71,7 +91,7 @@
               href="/"
               class="font-size-small font-align-center font-weight-bold img-none"
             >
-              <img src="/resource/img/장바구니.PNG" alt="장바구니" />장바구니
+              <img src="resource/img/장바구니.PNG" alt="장바구니" />장바구니
             </a>
           </div>
         </div>
@@ -131,12 +151,20 @@
     ></script>
     <script>
       let maple = $("#test_id");
-      console.log(maple);
-      maple.click((e) => {
-        e.preventDefault();
-        console.log(e.target.style.marginTop);
-        maple.css("margin-top", -100);
-        maple.css("transition", "margin-top 0.3s");
+      let maple_style = parseInt(maple.css("margin-top"), 10);
+      // console.log(maple);
+      // maple.click((e) => {
+      //   e.preventDefault();
+      //   console.log(e.target.style.marginTop);
+      //   maple.css("margin-top", -100);
+      //   maple.css("transition", "margin-top 0.3s");
+      // });
+      $(document).keyup(function (e) {
+        if (e.which === 13) {
+          maple_style -= 100;
+          maple.css("margin-top", maple_style);
+          maple.css("transition", "margin-top 0.3s");
+        }
       });
     </script>
     <script>
